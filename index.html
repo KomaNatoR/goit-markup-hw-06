@@ -371,10 +371,12 @@
                 <input required type="email" name="email" id="user_email" class="modal-input">
 
                 <label for="user_coment">Коментар</label>
-                <textarea name="coment" id="user_coment" class="modal-input"></textarea>
+                <textarea placeholder="Введіть текст" name="coment" id="user_coment" class="modal-input"></textarea>
 
-                <input required type="checkbox" name="agreement" id="user_agreement">
-                <label for="user_agreement">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></label>
+                <div class="modal-checkbox">
+                    <input required type="checkbox" name="agreement" id="user_agreement">
+                    <label for="user_agreement">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></label>
+                </div>
             </form>
 
             <button type="submit" class="btn">Відправити</button>
