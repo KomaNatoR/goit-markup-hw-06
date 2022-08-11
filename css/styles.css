@@ -234,6 +234,7 @@ body {
             .btn:hover, .btn:focus {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
             background-color: var(--button-hero-back-color);
+            outline-color: #FFFFFF;
             }
 
 /* ------------------------------ особливості ------------------------------ */
@@ -405,6 +406,7 @@ body {
             .team-soc-link:hover, .team-soc-link:focus {
                 background-color: var(--accent-color);
                 color: #FFFFFF;
+                outline-color: #FFFFFF;
             }
 /* ------------------------------ Постійні Клієнти ------------------------------ */
 .clients {background-color: var(--main-sections-color);}
@@ -441,18 +443,20 @@ body {
             color: var(--main-icons-color);
 
             transition: border-color var(--duration) var(--timing-function), 
-                color var(--duration) var(--timing-function);
+                color var(--duration) var(--timing-function),
+                outline-color var(--duration) var(--timing-function);
         }
             .clients-list-icon {fill: currentColor;}
         .clients-list-link:hover, .clients-list-link:focus {
             border-color: var(--accent-color);
             color: var(--accent-color);
+            outline-color: var(--accent-color);
         }
 
 
 
 
-/* ============================== НОГИ ========================= */
+/* ============================== НОГИ ============================== */
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -484,7 +488,9 @@ body {
         
         transition: color var(--duration) var(--timing-function);
         }
-        .contacts-down:hover, .contacts-down:focus {color: var(--accent-color);}
+        .contacts-down:hover, .contacts-down:focus {color: var(--accent-color); outline-color: var(--accent-color);}
+
+        /* --------------- соціалка ------------ */
     
     .footer-container-soc {margin-left: 70px;}
     .footer-title {
@@ -520,8 +526,9 @@ body {
         transition: background-color var(--duration) var(--timing-function);
     }
     .footer-soc-icon {fill: currentColor;}
-        .footer-soc-link:hover, .footer-soc-link:focus {background-color: var(--accent-color);}
-
+        .footer-soc-link:hover, .footer-soc-link:focus {background-color: var(--accent-color); outline-color: #FFFFFF;}
+        
+        /* --------------- підписка ----------------- */
 
     .footer-container-form {margin-left: auto;}
     .footer-form {
@@ -539,6 +546,12 @@ body {
             border: 1px solid rgba(255, 255, 255, 0.3);
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
             border-radius: 4px;
+
+            transition: border-color var(--duration) var(--timing-function);
+        }
+        .footer-email:hover, .footer-email:focus {
+            border-color: var(--accent-color);
+            outline: transparent;
         }
         .footer-email::placeholder {
             font-weight: 400;
@@ -779,7 +792,7 @@ body {
             height: 40px;
             padding-left: 42px;
 
-            cursor: pointer;
+            /* cursor: pointer; */
 
             border: 1px solid rgba(33, 33, 33, 0.2);
             border-radius: 4px;
