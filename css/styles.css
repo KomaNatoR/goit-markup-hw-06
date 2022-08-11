@@ -754,29 +754,62 @@ body {
     .modal-form textarea {
         height: 120px;
         padding: 16px;
-        margin-bottom: 20px;
 
         resize: none;
     }
 
     .modal-check-container {
+        position: relative;
+
+        text-align: center;
+        margin-top: 20px;
         margin-bottom: 30px;
+    }
+
+    .modal-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
 
         font-weight: 400;
         font-size: 14px;
         line-height: 1.714;
         letter-spacing: 0.03em;
-        text-align: center;
+        /* text-align: center; */
 
         color: var(--main-text-color);
     }
-        .modal-check-container a {
-            text-decoration-line: underline;
-            color: #2196F3;
+        .modal-text a {color: #2196F3;}
+        .modal-text span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 16px;
+            height: 16px;
+
+            border: 2px solid var(--title-text-color);
+            border-radius: 2px;
+
+            transition: border-color var(--duration) var(--timing-function);
         }
+            .check-icon {fill: transparent;}
+
+            .modal-check:checked + .modal-text span {
+                background-color: var(--accent-color);
+                border: none;
+            }
+            .modal-check:checked + .modal-text .check-icon {
+                fill:#FFFFFF;
+            }
+            .modal-check:focus + .modal-text span {
+                border-color: var(--accent-color);
+            }
+            .modal-agreement:focus {outline-color: var(--accent-color);}
 
 
-.modal [type="submit"] {
+.modal-form button {
     display: inherit;
     
     width: 200px;

@@ -395,7 +395,14 @@
 
                 <div class="modal-check-container">
                     <input required type="checkbox" name="agreement" id="user-agreement" class="modal-check hidden">
-                    <label for="user-agreement">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></label>
+                    <label for="user-agreement" class="modal-text">
+                        <span>
+                            <svg class="check-icon" width="13" height="10">
+                                <use href="./images/symbol-defs.svg#icon-check"></use>
+                            </svg>
+                        </span>
+                        Погоджуюся з розсилкою та приймаю <a href="" class="modal-agreement">Умови договору</a>
+                    </label>
                 </div>
 
                 <button type="submit" class="btn">Відправити</button>
