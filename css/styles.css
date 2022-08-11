@@ -459,6 +459,7 @@ body {
 
     background-color: var(--foothero-back-color);
 }
+
 .footer .container {
     display: flex;
     align-items: baseline;
@@ -486,7 +487,7 @@ body {
         .contacts-down:hover, .contacts-down:focus {color: var(--accent-color);}
     
     .footer-container-soc {margin-left: 70px;}
-    .footer-soc-title {
+    .footer-title {
         margin-bottom: 20px;
 
         font-weight: 700;
@@ -520,6 +521,44 @@ body {
     }
     .footer-soc-icon {fill: currentColor;}
         .footer-soc-link:hover, .footer-soc-link:focus {background-color: var(--accent-color);}
+
+
+    .footer-container-form {margin-left: auto;}
+    .footer-form {
+        display: flex;
+    }
+
+        .footer-email {
+            width: 358px;
+            height: 50px;
+            margin-right: 12px;
+            padding-left: 16px;
+
+            background-color: transparent;
+
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            border-radius: 4px;
+        }
+        .footer-email::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.25;
+
+            letter-spacing: 0.03em;
+            
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .footer-form button {
+            width: 200px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .telega-icon {fill: #FFFFFF;}
 
 /* ============================================================= */
 /* ========================= ПОРТФОЛІО ========================= */
