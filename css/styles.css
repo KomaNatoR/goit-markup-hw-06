@@ -680,7 +680,13 @@ body {
             background: #FFFFFF;
             border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 50%;
+            outline: transparent;
+
+            transition: border-color var(--duration) var(--timing-function);
         }
+        .modal-btn-close:focus {border-color: var(--accent-color);}
+
+        .modal-close-icon {transition: fill var(--duration) var(--timing-function);}
         .modal-btn-close:hover .modal-close-icon {
             fill: var(--accent-color);
         }
@@ -712,21 +718,39 @@ body {
 
     color: #757575;
 }
+    .form-input-title {}
+    .modal-data {
+        position: relative;
 
-    .modal-input {
-        width: 100%;
-        height: 40px;
-        padding-left: 42px;
-        margin-bottom: 10px;
         margin-top: 4px;
+        margin-bottom: 10px;
+    }
+        .modal-icon {
+            position: absolute;
+            top:50%;
+            left: 12px;
+            transform: translateY(-50%);
 
-        cursor: pointer;
+            transition: fill var(--duration) var(--timing-function);
+        }
+        .modal-input:hover + .modal-icon, .modal-input:focus + .modal-icon  {fill: var(--accent-color);}
 
-        border: 1px solid rgba(33, 33, 33, 0.2);
-        border-radius: 4px;
-    } 
-    .modal-input:hover {border-color: var(--accent-color);}
-    .modal-input::placeholder {color: rgba(117, 117, 117, 0.5);}
+        .modal-input {
+            width: 100%;
+            height: 40px;
+            padding-left: 42px;
+
+            cursor: pointer;
+
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            border-radius: 4px;
+            outline: transparent;
+
+            transition: border-color var(--duration) var(--timing-function);
+        } 
+        .modal-input:hover, .modal-input:focus {border-color: var(--accent-color);}
+
+        .modal-input::placeholder {color: rgba(117, 117, 117, 0.5);}
     .modal-form textarea {
         height: 120px;
         padding: 16px;
@@ -735,7 +759,7 @@ body {
         resize: none;
     }
 
-    .modal-checkbox {
+    .modal-check-container {
         margin-bottom: 30px;
 
         font-weight: 400;
@@ -746,7 +770,7 @@ body {
 
         color: var(--main-text-color);
     }
-        .modal-checkbox a {
+        .modal-check-container a {
             text-decoration-line: underline;
             color: #2196F3;
         }
